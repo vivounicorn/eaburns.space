@@ -1,0 +1,10 @@
+Ethan A. Burns:
+  entire files -> bullet.c, bullet.h, color.c, color.h, data.c, data.h
+                  enemy.c, enemy.h, explosion.c, explosion.h, font.c,
+                  font.h, fps.c, fps.h, gameover.c, gameover.h, level.c,
+                  level.h, lifebar.c, lifebar.h, main.c, planet.c, planet.h,
+                  score.c, score.h, sdl.c, sdl.h, ship.c, ship.h, ship_types.c,
+                  ship_types.h, side.h, size.h, sprite.c, sprite.h, stars.c,
+                  stars.h, xml.c, xml.h, xml_tags.c, xml_tags.h, m_pattern.h,
+                  m_pattern.c arguments.h, arguments.c, bullet_types.h,
+                  bullet_types.c

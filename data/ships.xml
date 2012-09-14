@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+
+<!--
+ This config file is used to create types of ships (enemy and player)
+ Created by: Ethan Burns, 01-25-05
+-->
+
+<!--
+ Ships are added below inside the ``ships'' tag.
+-->
+
+<ships>
+
+<!-- The main player ship -->
+  <ship name="dart">
+    <speed val="2" />
+    <frameDelay val="200" />
+    <points val="100" />
+    <hp val="5" />
+    <frames num="1">
+      <center image="dart_center.png" />
+      <left image="dart_left.png" />
+      <right image="dart_right.png" />
+    </frames>
+  </ship>
+
+<!-- A Basic ship -->
+  <ship name="fighter">
+    <speed val="1" />
+    <frameDelay val="200" />
+    <points val="50" />
+    <hp val="3" />
+    <frames num="1">
+      <center image="fighter_center.png" />
+      <left image="fighter_left.png" />
+      <right image="fighter_right.png" />
+    </frames>
+  </ship>
+  
+<!-- A Test ship -->
+  <ship name="fighter_fast">
+    <speed val="2" />
+    <frameDelay val="200" />
+    <points val="50" />
+    <hp val="3" />
+    <frames num="1">
+      <center image="fighter_center.png" />
+      <left image="fighter_left.png" />
+      <right image="fighter_right.png" />
+    </frames>
+  </ship>
+
+<!-- A Test ship -->
+  <ship name="fighter_zig">
+    <speed val="2" />
+    <frameDelay val="200" />
+    <points val="50" />
+    <hp val="3" />
+    <movement pattern="zig_right"/>
+    <frames num="1">
+      <center image="fighter_center.png" />
+      <left image="fighter_left.png" />
+      <right image="fighter_right.png" />
+    </frames>
+  </ship>
+
+<!-- A Test ship -->
+  <ship name="fighter_zag">
+    <speed val="2" />
+    <frameDelay val="200" />
+    <points val="50" />
+    <hp val="3" />
+    <movement pattern="zag_left"/>
+    <frames num="1">
+      <center image="fighter_center.png" />
+      <left image="fighter_left.png" />
+      <right image="fighter_right.png" />
+    </frames>
+  </ship>
+
+</ships>

@@ -1,0 +1,11 @@
+<level num="1">
+  <enemy x="560" y="-100" type="fighter_zag" />
+  <enemy x="100" y="-100" type="fighter_zig" />
+  <enemy x="300" y="-500" type="fighter" />
+  <enemy x="400" y="-500" type="fighter_fast" />
+  <enemy x="100" y="-700" type="fighter" />
+  <enemy x="300" y="-800" type="fighter" />
+  <enemy x="200" y="-1500" type="fighter" />
+  <enemy x="400" y="-1800" type="fighter_fast" />
+  <enemy x="560" y="-2000" type="fighter_zag" />
+</level>

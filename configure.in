@@ -1,0 +1,67 @@
+dnl------------------------
+dnl Settings
+dnl------------------------
+
+AC_PREREQ([2.59])
+AC_INIT(src/main.c)
+
+AM_INIT_AUTOMAKE(space, 0.2.3)
+AC_CONFIG_SRCDIR(src/main.c)
+
+AM_CONFIG_HEADER(src/config.h)
+
+AM_MAINTAINER_MODE
+
+
+dnl------------------------
+dnl Define some stuff
+dnl------------------------
+
+test "${prefix}" = NONE && prefix=${ac_default_prefix}
+AC_DEFINE_UNQUOTED(DATA, "${prefix}/share/space", [Data directory])
+
+AC_DEFINE_UNQUOTED(DATA_IMAGES, "images", [Data directory])
+AC_DEFINE_UNQUOTED(DATA_LEVELS, "levels", [Data directory])
+AC_DEFINE_UNQUOTED(DATA_FONTS, "fonts", [Data directory])
+
+AC_DEFINE_UNQUOTED(SHIP_CONFIG, "ships.xml", [Ship xml configuration file])
+AC_DEFINE_UNQUOTED(BULLET_CONFIG, "bullets.xml", [Ship xml configuration file])
+AC_DEFINE_UNQUOTED(MAX_PATH_LEN, 500, [Max path length])
+
+AC_DEFINE_UNQUOTED(DEBUG_XML, , [Enable debugging for xml parsing])
+
+DATA_FILES=`cd data; find . -name CVS -prune -o -name ".cvs*" -o -name "Makefile*" -o -type d -o -print`
+DATA_FILES=`echo $DATA_FILES`
+AC_SUBST([DATA_FILES])
+
+dnl------------------------
+dnl Check for stuff
+dnl------------------------
+
+dnl Check for SDL
+dnl
+AC_CHECK_LIB(SDL, SDL_Init,,AC_MSG_ERROR(Cannot find SDL))
+AC_CHECK_HEADER( SDL/SDL.h,,AC_MSG_ERROR(Cannot find SDL/SDL.h))
+
+dnl Check for SDL_image
+dnl
+AC_CHECK_LIB(SDL_image, IMG_Load,,AC_MSG_ERROR(Cannnot find SDL_image))
+AC_CHECK_HEADER( SDL/SDL_image.h,,AC_MSG_ERROR(Cannot find SDL/SDL_image.h))
+
+dnl Check for SDL_ttf
+dnl
+AC_CHECK_LIB(SDL_ttf, TTF_Init,,AC_MSG_ERROR(Cannnot find SDL_ttf))
+AC_CHECK_HEADER( SDL/SDL_ttf.h,,AC_MSG_ERROR(Cannot find SDL/SDL_ttf.h))
+
+dnl Check for expat
+dnl
+AC_CHECK_LIB(expat, XML_ParserCreate,,AC_MSG_ERROR(Cannot find Expat))
+AC_CHECK_HEADER( expat.h,,AC_MSG_ERROR(Cannot find expat.h))
+
+AC_PROG_CC
+AC_PROG_INSTALL
+
+AC_OUTPUT(Makefile \
+          src/Makefile \
+          data/Makefile \
+          )

@@ -1,0 +1,9 @@
+<bullets>
+
+  <bullet name="machine_gun">
+    <bimage image="bullet1.png" />
+    <bdelay val="200" />
+    <bdammage val="1" />
+  </bullet>
+
+</bullets>

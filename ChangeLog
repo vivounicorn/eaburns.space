@@ -1,0 +1,37 @@
+2005-02-16 Ethan Burns
+  * Changed version to 0.2.3
+  * Added back the 3D ship image.
+  * Added a 3D fighter (enemy) image.
+  * Added a 3D planet.
+
+2005-02-15 Ethan Burns
+  * Changed version to 0.2.2
+  * Changed bullets to be loaded out of an xml config file simular to
+    the way ships are loaded.  They the bullet_type is grabed from a
+    list of bullet_types to get it's information.
+  * Took out 3D sprite for a bit till I get a better rendering and some
+    for the enemy ships.
+
+2005-02-14 Ethan Burns
+  * Made a 3D ship sprite... This kicks ass I'll have to make more!
+
+2005-02-13 Ethan Burns
+  * There is now very shitty inaccurate FPS limiting support
+
+2005-02-09 Ethan Burns
+  * Enemies now only follow their movement patterns if they are active.
+  * Started version numbering with 0.2.1
+
+2005-02-01 Ethan Burns
+  * Changed version to 0.2.1
+  * Added in some simple command line argument support.  Help and 
+    verbosity and version are added, along with the V_PRINT macro
+    and some verbose output.  Added movement patterns for enemies and 
+    tried a few of them out (Zig and Zag patterns).
+    
+2005-01-30 Ethan Burns  <eaburns@cisunix.unh.edu>
+  * Finally getting to the documentation.  Right now the game is
+    at a nice beta stage.  I made the lists for enemies, bullets, 
+    and explosions more robust.  Before they would on occasion
+    give a SegFault.  Also killing an enemy will now make a ``BIG''
+    explosion. 
